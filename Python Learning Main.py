@@ -78,3 +78,8 @@ print(5 not in my_list)
 print(10 in my_list)
 
 temps = [[0.0 for h in range(24) if True] for d in range(31)] # 24x31 Matrix 
+
+
+the_list = []
+the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
+print(the_list)

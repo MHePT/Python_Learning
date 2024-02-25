@@ -6,11 +6,13 @@ class ExampleClass:
 
 example_object = ExampleClass()
 
+
 print(hasattr(example_object, 'b'))
 print(hasattr(example_object, 'a'))
 print(hasattr(ExampleClass, 'b'))
 print(hasattr(ExampleClass, 'a'))
 
+print(dir(ExampleClass))
 print(ExampleClass.__dict__)
 example_object = ExampleClass(2)
 
@@ -30,16 +32,16 @@ class ExampleClass2:
     __counter = 0
     def __init__(self, val = 1):
         self.__first = val
-        ExampleClass.__counter += 1
+        ExampleClass2.__counter += 1
 
 
 example_object_1 = ExampleClass2()
 example_object_2 = ExampleClass2(2)
 example_object_3 = ExampleClass2(4)
 
-print(example_object_1.__dict__, example_object_1._ExampleClass__counter)
-print(example_object_2.__dict__, example_object_2._ExampleClass__counter)
-print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
+print(example_object_1.__dict__, example_object_1._ExampleClass2__counter)
+print(example_object_2.__dict__, example_object_2._ExampleClass2__counter)
+print(example_object_3.__dict__, example_object_3._ExampleClass2__counter)
 
 
 
